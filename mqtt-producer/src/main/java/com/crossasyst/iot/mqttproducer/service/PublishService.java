@@ -50,6 +50,8 @@ public class PublishService {
             log.info("Adding smart watch records to the mqtt payload.");
             mqttMessage.setPayload(smartWatch.toString().getBytes());
         }
+
+        log.info("Publish message to the mqtt topic");
         mqttClient.publish(topic, mqttMessage);
         log.info("Message published to the mqtt");
     }
