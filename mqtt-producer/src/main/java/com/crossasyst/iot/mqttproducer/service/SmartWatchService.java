@@ -39,6 +39,7 @@ public class SmartWatchService {
         smartWatchResponse.setId(smartWatchEntity.getWatchId());
         log.info("Smart watch response id is {} ", smartWatchEntity.getWatchId());
 
+        log.info("Calling mqtt publish service.");
         publishService.publish(smartWatchEntity.getWatchId());
         return smartWatchResponse;
     }
