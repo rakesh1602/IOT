@@ -31,7 +31,7 @@ public class SubscriberService {
             });
         } catch (MqttException e) {
             log.error("Failed to subscribe to the MQTT topic: {}", e.getMessage());
-            throw new RuntimeException("Failed to subscribe to the MQTT topic", e);
+            throw new RuntimeException("Failed to subscribe to the MQTT topic " + mqttTopic, e);
         }
     }
 }
